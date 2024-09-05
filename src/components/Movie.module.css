@@ -1,15 +1,16 @@
+a {
+  text-decoration: none;
+}
+
 .movie {
   background-color: white;
-  margin-bottom: 70px;
-  font-weight: 300;
+  /* font-weight: 300; */
   padding: 20px;
   border-radius: 5px;
-  color: #adaeb9;
+  color: #2c2c2c;
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) 2fr;
+  grid-template-columns: 150px 2fr;
   grid-gap: 20px;
-  text-decoration: none;
-  color: inherit;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
@@ -26,29 +27,36 @@
 
 .movie__title,
 .movie__year {
-  margin: 0;
-  font-weight: 300;
-  text-decoration: none;
+  font-weight: 500;
 }
 
-.movie__title a {
-  margin-bottom: 5px;
+.movie__title {
   font-size: 24px;
-  color: #2c2c2c;
-  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.movie__year {
+  margin-bottom: 10px;
 }
 
 .movie__genres {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 6px 0px;
   display: flex;
   flex-wrap: wrap;
-  margin: 5px 0px;
 }
 
-.movie__genres li,
-.movie__year {
-  margin-right: 10px;
-  font-size: 14px;
+.movie__genres li {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background-color: black;
+  color: white;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.movie__disc {
+  font-weight: 300;
+  color: #adaeb9;
 }

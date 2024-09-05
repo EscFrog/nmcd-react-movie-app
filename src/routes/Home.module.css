@@ -10,15 +10,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
   font-weight: 300;
 }
 
 .movies {
   display: grid;
-  grid-template-columns: repeat(2, minmax(400px, 1fr));
-  grid-gap: 100px;
-  padding: 50px;
-  width: 80%;
+  grid-template-columns: repeat(2, minmax(500px, 1fr));
+  grid-gap: 80px;
+  padding: 20px;
+  width: 90%;
   padding-top: 70px;
 }
 
