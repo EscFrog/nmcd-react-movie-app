@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import styles from "./MovieDetail.module.css";
 
 function MovieDetail({
   coverImg,
@@ -12,24 +13,30 @@ function MovieDetail({
   description,
 }) {
   return (
-    <div>
+    <div className={styles.frame}>
       <img src={coverImg} alt={title} />
-      <h2>{title}</h2>
-      <h2>{`(${year})`}</h2>
-      <div>{imdb_code}</div>
-      <div>{`Runtime: ${runtime} minutes`}</div>
-      <ul>
-        {genres.map((genre) => (
-          <li key={genre}>{genre}</li>
-        ))}
-      </ul>
-      <div>{`Rating: ${rating}`}</div>
-      <div>{`Likes: ${like_count}`}</div>
-      {description !== "" ? (
-        <p>{description}</p>
-      ) : (
-        <p>Can't find description</p>
-      )}
+      <div className={styles.disc_area}>
+        <div className={styles.titleRow}>
+          <h2 className={styles.title}>{title}</h2>
+          <h2 className={styles.year}>{`(${year})`}</h2>
+        </div>
+        <div className={styles.runtime}>{`${runtime} minutes`}</div>
+        <ul className={styles.genres}>
+          {genres.map((genre) => (
+            <li key={genre}>{genre}</li>
+          ))}
+        </ul>
+        <div className={styles.reactions}>
+          <div>{`Rating: ${rating}`}</div>
+          <div>{`Likes: ${like_count}`}</div>
+        </div>
+        <p className={styles.disc}>
+          {description !== ""
+            ? description
+            : "Sorry, We can't find description."}
+        </p>
+        <div className={styles.code}>{`IMDB - ${imdb_code}`}</div>
+      </div>
     </div>
   );
 }

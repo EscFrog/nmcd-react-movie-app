@@ -16,7 +16,11 @@ function Movie({ id, coverImg, title, year, summary, genres }) {
             ))}
           </ul>
           <p className={styles.movie__disc}>
-            {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
+            {summary !== ""
+              ? summary.length > 235
+                ? `${summary.slice(0, 235)}...`
+                : summary
+              : "Sorry, We can't find description."}
           </p>
         </div>
       </div>
