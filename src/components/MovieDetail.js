@@ -20,15 +20,24 @@ function MovieDetail({
           <h2 className={styles.title}>{title}</h2>
           <h2 className={styles.year}>{`(${year})`}</h2>
         </div>
-        <div className={styles.runtime}>{`${runtime} minutes`}</div>
+        <div className={styles.runtime}>
+          <span class="material-symbols-outlined">timer</span>
+          <span>{runtime > 0 ? `${runtime} min.` : "Unknown"}</span>
+        </div>
         <ul className={styles.genres}>
           {genres.map((genre) => (
             <li key={genre}>{genre}</li>
           ))}
         </ul>
         <div className={styles.reactions}>
-          <div>{`Rating: ${rating}`}</div>
-          <div>{`Likes: ${like_count}`}</div>
+          <div>
+            <span class="material-symbols-outlined">star</span>
+            <span>{rating}</span>
+          </div>
+          <div>
+            <span class="material-symbols-outlined">favorite</span>
+            <span>{like_count}</span>
+          </div>
         </div>
         <p className={styles.disc}>
           {description !== ""
