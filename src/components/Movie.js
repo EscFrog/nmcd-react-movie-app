@@ -11,9 +11,11 @@ function Movie({ id, coverImg, title, year, summary, genres }) {
           <h2 className={styles.movie__title}>{title}</h2>
           <h3 className={styles.movie__year}>{`(${year})`}</h3>
           <ul className={styles.movie__genres}>
-            {genres.map((genre) => (
-              <li key={genre}>{genre}</li>
-            ))}
+            {Array.isArray(genres) ? (
+              genres.map((genre) => <li key={genre}>{genre}</li>)
+            ) : (
+              <li>undefined</li>
+            )}
           </ul>
           <p className={styles.movie__disc}>
             {summary !== ""
@@ -33,7 +35,7 @@ Movie.propTypes = {
   coverImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Movie;

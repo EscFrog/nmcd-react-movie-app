@@ -25,9 +25,11 @@ function MovieDetail({
           <span>{runtime > 0 ? `${runtime} min.` : "Unknown"}</span>
         </div>
         <ul className={styles.genres}>
-          {genres.map((genre) => (
-            <li key={genre}>{genre}</li>
-          ))}
+          {Array.isArray(genres) ? (
+            genres.map((genre) => <li key={genre}>{genre}</li>)
+          ) : (
+            <li>undefined</li>
+          )}
         </ul>
         <div className={styles.reactions}>
           <div>
@@ -56,7 +58,7 @@ MovieDetail.propTypes = {
   year: PropTypes.number.isRequired,
   imdb_code: PropTypes.string.isRequired,
   runtime: PropTypes.number.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string),
   rating: PropTypes.number.isRequired,
   likes_count: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
