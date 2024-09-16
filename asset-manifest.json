@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/nmcd-react-movie-app/static/css/main.3eaa6399.css",
-    "main.js": "/nmcd-react-movie-app/static/js/main.aae857fc.js",
+    "main.js": "/nmcd-react-movie-app/static/js/main.873be5e7.js",
     "index.html": "/nmcd-react-movie-app/index.html",
     "main.3eaa6399.css.map": "/nmcd-react-movie-app/static/css/main.3eaa6399.css.map",
-    "main.aae857fc.js.map": "/nmcd-react-movie-app/static/js/main.aae857fc.js.map"
+    "main.873be5e7.js.map": "/nmcd-react-movie-app/static/js/main.873be5e7.js.map"
   },
   "entrypoints": [
     "static/css/main.3eaa6399.css",
-    "static/js/main.aae857fc.js"
+    "static/js/main.873be5e7.js"
   ]
 }
